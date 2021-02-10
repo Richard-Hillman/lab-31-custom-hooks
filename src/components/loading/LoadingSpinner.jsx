@@ -1,7 +1,9 @@
 import React from 'react';
 
 const LoadingSpinner = () => (
-  <img src="./tree.gif" alt="LoadingSpinner" />
+  <>
+    <h1>Loading</h1>
+  </>
 );
 
 export default LoadingSpinner;

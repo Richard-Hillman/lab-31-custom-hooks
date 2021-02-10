@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { GetCharacterList } from '../services/GetCharacterList';
 
-export const UseCharacterList = () => {
+export const useCharacterList = () => {
   const [loading, setLoading] = useState(true);
   const [characters, setCharacters]  = useState([]);
   

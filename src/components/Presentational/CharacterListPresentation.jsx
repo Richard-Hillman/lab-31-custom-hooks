@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Character from './Character';
+import CharacterDetailsPresentation from './CharacterDetailsPresentation';
 
-const CharacterListPresentation = ({ characters }) => {
+function CharacterListPresentation({ characters }) {
   const characterElements = characters.map(character => (
     <li key={character.name}>
       <Link to={`/characters/${character.name}`}>
-        <Character 
-          image={character.image}
-          name={character.name} />
+        <CharacterDetailsPresentation 
+          key={character.name} 
+          {...character} />
       </Link>
     </li>
   ));
@@ -19,7 +19,7 @@ const CharacterListPresentation = ({ characters }) => {
       {characterElements}
     </ul>
   );
-};
+}
 
 CharacterListPresentation.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
