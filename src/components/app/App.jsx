@@ -4,7 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import CharactersList from '../../containers/CharactersList';
+import CharactersList from '../../containers/CharacterList';
 import CharacterDetails from '../../containers/CharacterDetails';
 
 
