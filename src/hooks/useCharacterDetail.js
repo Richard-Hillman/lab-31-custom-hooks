@@ -3,7 +3,7 @@ import { GetCharacterByName } from '../services/GetCharacterByName';
 
 export const useCharacterDetail = name => {
   const [loading, setLoading] = useState(true);
-  const [character, setCharacter] = useState(null);
+  const [character, setCharacter] = useState({});
   
   useEffect(() => {
     GetCharacterByName(name)

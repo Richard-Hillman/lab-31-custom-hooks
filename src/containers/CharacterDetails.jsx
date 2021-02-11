@@ -7,9 +7,10 @@ import LoadingSpinner from '../components/loading/LoadingSpinner';
 
 const CharacterDetails = ({ match }) => {
   const { loading, character } = useCharacterDetail(match.params.name);
-
   if(loading) return <LoadingSpinner />;
+  console.log(character, 'character deeeeeeeeeeeeeeeeeeetsssss');
   return <CharacterDetailsPresentation {...character} />;
+ 
 };
 
 CharacterDetails.propTypes = {
