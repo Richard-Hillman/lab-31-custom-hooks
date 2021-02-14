@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getCharacterByName } from '../services/getCharacterByName';
+import { getCharacterByName } from '../services/GetCharacterByName';
 
 export const useCharacterDetail = name => {
   const [character, setCharacter] = useState({});
