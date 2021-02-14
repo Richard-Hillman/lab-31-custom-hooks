@@ -10,11 +10,24 @@ import CharacterDetails from '../../containers/CharacterDetails';
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={CharactersList} />
-        <Route path="/characters/:name" component={CharacterDetails} />
-      </Switch>
-    </Router>
+    <>
+      <Router>
+
+        <Switch>
+
+          <Route 
+            path="/"
+            exact
+            component={CharactersList} />
+
+          <Route 
+            path="/characters/:name"
+            exact
+            component={CharacterDetails} />
+
+        </Switch>
+
+      </Router>
+    </>
   );
 }

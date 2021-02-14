@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { GetCharacterList } from '../services/GetCharacterList';
+import { getCharacterList } from '../services/GetCharacterList';
 
 export const useCharacterList = () => {
-  const [loading, setLoading] = useState(true);
   const [characters, setCharacters]  = useState([]);
+  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    GetCharacterList()
-      .then(characters => {
+    getCharacterList()
+      .then((characters) => {
         setCharacters(characters);
         setLoading(false);
       });
@@ -15,7 +15,7 @@ export const useCharacterList = () => {
   
   
   return {
-    loading,
-    characters
+    characters, 
+    loading
   };
 };

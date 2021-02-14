@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CharacterDetailsPresentation = ({ name, image, rank }) => {
-  console.log(name, 'namamamamamamama');
+const CharacterDetailsPresentation = ({ character }) => { 
   return (
-
-    <figure>
-      <img src={image} alt={name} />
-      <figcaption>{rank}</figcaption>
-      <figcaption>{name}</figcaption>
+    <figure data-testid="character">
+      <img src={character.image} alt={character.name} />
+      <figcaption>{character.name}</figcaption>
     </figure>
   );
 };
 
 CharacterDetailsPresentation.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string,
-  rank: PropTypes.string
+  character: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
+  })
 };
 
 export default CharacterDetailsPresentation;

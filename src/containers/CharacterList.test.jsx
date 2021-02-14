@@ -30,9 +30,6 @@ describe('CharacterList container with Mock Data and mock server interceptor', (
 
     // ------------------------------------------------------------
 
-    // grabs alt text for loading 
-    screen.getByAltText('loading');
-
     // determines if a list is showing up after loading screen finishes
     const theTestList = await screen.findByTestId('charactersTest');
         

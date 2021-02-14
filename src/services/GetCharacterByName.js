@@ -1,5 +1,4 @@
-export const GetCharacterByName = name => {
+export const getCharacterByName = (name) => {
   return fetch(`https://xfiles-api.herokuapp.com/api/v1/characters/${name}`)
-    .then(res => res.json())
-    .then(([res]) => res);
+    .then(res => res.json());
 };

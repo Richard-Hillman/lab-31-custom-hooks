@@ -4,11 +4,10 @@ import CharacterListPresentation from '../components/Presentational/CharacterLis
 import LoadingSpinner from '../components/loading/LoadingSpinner';
 import { useCharacterList } from '../hooks/useCharacterList';
 
-const CharacterList = () => {
+export default function CharacterList() {
   const { loading, characters } = useCharacterList();
 
   if(loading) return <LoadingSpinner />;
   return <CharacterListPresentation characters={characters} />;
-};
+}
 
-export default CharacterList;
